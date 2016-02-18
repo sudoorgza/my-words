@@ -18,6 +18,10 @@ td {
    font-weight: 100;
 }
 
+input {
+  width: 150px;
+}
+
 .heading {
   font-size: 20px;
   margin: auto;
