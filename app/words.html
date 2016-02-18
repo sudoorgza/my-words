@@ -1,0 +1,21 @@
+<table class="w3-table w3-bordered w3-striped w3-border w3-hoverable">
+  <thead>
+    <tr>
+      <th><input #myWord (keyup)="inputText($event)"></th>
+      <th>{{ myName }}</th>
+      <th><span *ngFor="#word of allWords">{{word}}</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First Name</td>
+      <td>{{myWord.value}}</td>
+      <td>Points</td>
+    </tr>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>{{myWord.value}}</td>
+    </tr>
+  </tbody>
+<table>
