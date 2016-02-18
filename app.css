@@ -1,0 +1,43 @@
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.font1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.font2 {
+  font-family: 'Handlee', cursive;
+}
+
+.font-light {
+   font-weight: 100;
+}
+
+.heading {
+  font-size: 20px;
+  margin: auto;
+
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* General */
+transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
