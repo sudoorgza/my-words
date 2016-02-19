@@ -1,9 +1,10 @@
+import {bootstrap} from 'angular2/platform/browser'
 import {Component} from 'angular2/core';
 
 @Component({
-    selector: 'my-app',
-    templateUrl: 'app/words.html',
-    styleUrls: ['app/w3.css']
+    selector: 'app',
+    templateUrl: './words.html',
+    styleUrls: ['../css/w3.css']
 })
 export class AppComponent {
   private words = WORDS.slice(0);
@@ -54,3 +55,5 @@ export class AppComponent {
 }
 
 var WORDS: string[] = ["The", "and", "on", "are", "A", "This", "is", "my", "I", "she", "he", "we", "me"];
+
+bootstrap(AppComponent)
