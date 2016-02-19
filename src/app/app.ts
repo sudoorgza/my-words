@@ -1,9 +1,9 @@
 import {bootstrap} from 'angular2/platform/browser'
-import {Component} from 'angular2/core';
+import {Component} from 'angular2/core'
 
 @Component({
     selector: 'app',
-    templateUrl: './words.html',
+    templateUrl: 'app/words.html',
     styleUrls: ['../css/w3.css']
 })
 export class AppComponent {

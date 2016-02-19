@@ -1,18 +1,22 @@
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Angular 2 QuickStart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word sheets</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
+
+    <!-- Put your css files here to have them load in development. In production they will be concated together. -->
+    <!-- build:css -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- endbuild -->
 
   </head>
-
-  <!-- 3. Display the application -->
   <body>
-    <app>Loading...</app>
+    <app></app>
 
     <!-- These are the necessary angular2 development files. Don't put your own files here or they won't be included in production. -->
     <!-- build:js -->
@@ -27,11 +31,10 @@
         transpiler: 'typescript',
         typescriptOptions: { emitDecoratorMetadata: true }
       });
-      System.import('./app/app.component.ts');
+      System.import('./app/app.ts');
     </script>
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- endbuild -->
 
   </body>
-
 </html>
