@@ -1,6 +1,7 @@
 {
   "name": "angular2-quickstart",
   "version": "1.0.0",
+  "repository": "https://github.com/sudoorgza/my-words.git",
   "scripts": {
     "postinstall": "npm run typings install",
     "tsc": "tsc",
