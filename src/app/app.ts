@@ -9,16 +9,16 @@ enableProdMode()
 })
 export class AppComponent {
   private words = WORDS.slice(0);
-  private word = 'word';
+  private word = '';
   public hero = 'Windstorm';
   constructor() {
         this.addWord('word');
   }
   inputText(event:any) {
+    this.word = event.target.value
     this.addWord(event.target.value)
   }
   private addWord(newWord) {
-    this.word = newWord
     let newWords = WORDS.slice(0)
     newWords.push(newWord)
     newWords.push(newWord)

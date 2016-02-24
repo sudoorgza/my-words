@@ -57,6 +57,11 @@ gulp.task('assets', function() {
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('favicon', function() {
+  return gulp.src('src/favicon.ico')
+    .pipe(gulp.dest('dist/'));
+});
+
 gulp.task('dependencies', function() {
   return gulp.src(['node_modules/reflect-metadata/Reflect.js', 'node_modules/zone.js/dist/zone.js'])
     .pipe(concat('dependencies.js'))
@@ -64,7 +69,7 @@ gulp.task('dependencies', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', ['js', 'css', 'html', 'assets', 'dependencies'], function() {
+gulp.task('build', ['js', 'css', 'html', 'assets', 'favicon', 'dependencies'], function() {
   // add git push heroku master;heroku ps:scale web=1
   return del.sync(['src/bundle.js'])
 });
