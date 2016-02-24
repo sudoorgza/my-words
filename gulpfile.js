@@ -9,7 +9,9 @@ var webpack = require('webpack-stream');
 var htmlReplace = require('gulp-html-replace');
 
 gulp.task('clean', function() {
-  return del.sync(['dist/**']);
+  del.sync(['dist/css/**']);
+  del.sync(['dist/index.html']);
+  return del.sync(['dist/app/**']);
 });
 
 gulp.task('webpack', ['clean'], function() {
@@ -26,13 +28,18 @@ gulp.task('js', ['webpack'], function() {
 
 gulp.task('css', function() {
   return gulp.src('src/**/*.css')
-    .pipe(concat('main.css'))
     .pipe(autoprefixer())
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('html', function() {
+gulp.task('templates' , function(){
+  return gulp.src('src/app/*.html')
+    .pipe(gulp.dest('dist/app/'));
+
+})
+
+gulp.task('html', ['templates'], function() {
   return gulp.src('src/index.html')
     .pipe(htmlReplace({
       'css': {
@@ -58,5 +65,6 @@ gulp.task('dependencies', function() {
 });
 
 gulp.task('build', ['js', 'css', 'html', 'assets', 'dependencies'], function() {
+  // add git push heroku master;heroku ps:scale web=1
   return del.sync(['src/bundle.js'])
 });

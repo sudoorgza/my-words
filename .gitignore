@@ -25,5 +25,5 @@ jspm_packages
 .npm
 # Optional REPL history
 .node_repl_history
-Status API Training Shop Blog About Pricing
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
+# other
+src/app/app.js

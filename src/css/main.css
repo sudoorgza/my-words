@@ -1,9 +1,23 @@
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
 body {
    font-family: 'Roboto', sans-serif;
 }
 
 td {
     vertical-align: middle;
+}
+
+.float-right-btn {
+  position: absolute;
+  top:0;
+  right:0;
 }
 
 .font1 {

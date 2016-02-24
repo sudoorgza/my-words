@@ -1,10 +1,11 @@
 import {bootstrap} from 'angular2/platform/browser'
 import {Component} from 'angular2/core'
+import {enableProdMode} from 'angular2/core'
+enableProdMode()
 
 @Component({
     selector: 'app',
-    templateUrl: 'app/words.html',
-    styleUrls: ['../css/w3.css']
+    templateUrl: 'app/words.html'
 })
 export class AppComponent {
   private words = WORDS.slice(0);
