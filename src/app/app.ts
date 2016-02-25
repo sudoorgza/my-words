@@ -1,22 +1,22 @@
-import {Component} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser'
+import {enableProdMode, Component} from 'angular2/core'
+enableProdMode()
 
 @Component({
-    selector: 'my-app',
-    templateUrl: 'app/words.html',
-    styleUrls: ['app/w3.css']
+    selector: 'app',
+    templateUrl: 'app/words.html'
 })
 export class AppComponent {
   private words = WORDS.slice(0);
-  private word = 'word';
-  public hero = 'Windstorm';
+  public word = '';
   constructor() {
         this.addWord('word');
   }
   inputText(event:any) {
+    this.word = event.target.value
     this.addWord(event.target.value)
   }
   private addWord(newWord) {
-    this.word = newWord
     let newWords = WORDS.slice(0)
     newWords.push(newWord)
     newWords.push(newWord)
@@ -38,13 +38,13 @@ export class AppComponent {
     }
     this.words = newWords
   }
-  getWords() {
+  public getWords() {
     return this.words;
   }
   getWordLetters() {
     return this.word.split("");
   }
-  getWord() {
+  public getWord() {
     return this.word;
   }
   ngAfterViewInit() {
@@ -54,3 +54,5 @@ export class AppComponent {
 }
 
 var WORDS: string[] = ["The", "and", "on", "are", "A", "This", "is", "my", "I", "she", "he", "we", "me"];
+
+bootstrap(AppComponent)

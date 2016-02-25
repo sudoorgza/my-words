@@ -1,19 +1,5 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @carnun
- Watch 1,458
-  Star 32,567
- Fork 12,295 github/gitignore
- Code  Pull requests 124  Pulse  Graphs
-Branch: master Find file Copy pathgitignore/Node.gitignore
-e9e59f2  7 days ago
-@melonmanchan melonmanchan Merge Node.gitignore with master
-21 contributors @stuartpb @cheddar @arcresu @jucrouzet @melonmanchan @Gouthamve @DerNivel @jenrik @izuzak @iamsebastian @joreyaesh @cyrbil @kerimdzhanov @peat @rsolomo @indexzero @sroberts @aoberoi @pronebird @amrnt @aroben
-RawBlameHistory     35 lines (25 sloc)  545 Bytes
+# gulp distro
+dist
 # Logs
 logs
 *.log
@@ -39,5 +25,5 @@ jspm_packages
 .npm
 # Optional REPL history
 .node_repl_history
-Status API Training Shop Blog About Pricing
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
+# other
+src/app/app.js

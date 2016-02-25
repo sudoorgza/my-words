@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Word sheets</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <app>Loading...</app>
+
+    <!-- These are the necessary angular2 development files. Don't put your own files here or they won't be included in production. -->
+    <!-- build:js -->
+    <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="../node_modules/systemjs/dist/system.js"></script>
+    <script src="../node_modules/typescript/lib/typescript.js"></script>
+    <script src="../node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="../node_modules/angular2/bundles/http.dev.js"></script>
+    <script>
+      System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true }
+      });
+      System.import('./app/app.ts');
+    </script>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- endbuild -->
+
+  </body>
+
+</html>
