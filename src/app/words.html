@@ -10,7 +10,7 @@
           <h1>How to use this app</h1>
         </header>
           <ol style="margin-top: 0px;">
-            <li>Click on the top left word</li>
+            <li>Click on the top left word <span *ngIf="word">({{word}})</span><span *ngIf="!word">(&lt;click&gt;)</span></li>
             <li>Enter you new word</li>
             <li>Select "File>Print" from your browser's menu</li>
           </ol>

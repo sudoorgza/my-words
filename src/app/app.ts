@@ -1,6 +1,5 @@
 import {bootstrap} from 'angular2/platform/browser'
-import {Component} from 'angular2/core'
-import {enableProdMode} from 'angular2/core'
+import {enableProdMode, Component} from 'angular2/core'
 enableProdMode()
 
 @Component({
@@ -9,8 +8,7 @@ enableProdMode()
 })
 export class AppComponent {
   private words = WORDS.slice(0);
-  private word = '';
-  public hero = 'Windstorm';
+  public word = '';
   constructor() {
         this.addWord('word');
   }
@@ -40,13 +38,13 @@ export class AppComponent {
     }
     this.words = newWords
   }
-  getWords() {
+  public getWords() {
     return this.words;
   }
   getWordLetters() {
     return this.word.split("");
   }
-  getWord() {
+  public getWord() {
     return this.word;
   }
   ngAfterViewInit() {

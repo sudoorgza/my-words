@@ -63,7 +63,14 @@ gulp.task('favicon', function() {
 });
 
 gulp.task('dependencies', function() {
-  return gulp.src(['node_modules/reflect-metadata/Reflect.js', 'node_modules/zone.js/dist/zone.js'])
+  return gulp.src([//'node_modules/reflect-metadata/Reflect.js',
+  //'node_modules/zone.js/dist/zone.js',
+  // 'node_modules/angular2/bundles/angular2-polyfills.js',
+  // 'node_modules/systemjs/dist/system.js',
+  // 'node_modules/rxjs/bundles/Rx.js',
+  // 'node_modules/angular2/bundles/angular2.dev.js',
+  // 'node_modules/angular2/bundles/http.dev.js'
+])
     .pipe(concat('dependencies.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/'));
