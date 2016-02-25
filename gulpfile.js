@@ -22,6 +22,9 @@ gulp.task('webpack', ['clean'], function() {
 
 gulp.task('js', ['webpack'], function() {
   return gulp.src('src/bundle.js')
+    .pipe(uglify({
+            mangle: false
+          }))
     .pipe(gulp.dest('dist/'));
 });
 
@@ -71,6 +74,7 @@ gulp.task('dependencies', function() {
   // 'node_modules/angular2/bundles/http.dev.js'
 ])
     .pipe(concat('dependencies.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/'));
 });
 
