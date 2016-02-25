@@ -10,9 +10,9 @@
           <h1>How to use this app</h1>
         </header>
           <ol style="margin-top: 0px;">
-            <li>Click on the top left word <span *ngIf="word">({{word}})</span><span *ngIf="!word">(&lt;click&gt;)</span></li>
+            <li>Click on the top left word <span *ngIf="word">({{word}})</span><span *ngIf="!word">(it currently says "&lt;click&gt;")</span></li>
             <li>Enter you new word</li>
-            <li>Select "File>Print" from your browser's menu</li>
+            <li>Click on the Print button</li>
           </ol>
       </div>
     </div>
@@ -20,9 +20,12 @@
 </div>
 
 <div>
-  <div id="id02" style="display: none;" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none'"
-  class="w3-btn no-print w3-blue float-right-btn">Help?</div>
-  <table>
+  <span  class="float-right">
+    <div id="id03" style="display: block;" onclick="window.print();" class="w3-btn no-print w3-indigo">Print</div>
+    <div id="id02" style="display: none;" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none'"
+      class="w3-btn no-print w3-blue">Help?</div>
+  </span>
+<table>
     <tbody>
       <tr>
         <td class="heading" style="width:100px;">Read it</td>
